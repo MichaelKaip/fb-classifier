@@ -1,0 +1,31 @@
+stages:
+  - build
+  - test
+
+build:
+  image: python:3.7
+  stage: build
+  tags:
+   - Linux-DockerVM
+  script:
+    - echo "Building"
+
+  artifacts:
+    paths:
+      - fb_classifier/Modules/
+      - fb_classifier/Unit_Test/
+
+test:
+  image: python:3.7
+  stage: test
+  tags:
+   - Linux-DockerVM
+  script:
+    - echo "Testing"
+    - pip install -r other_resources/requirements_unit_test.txt
+    - pip install opencv-python
+    - pip install pillow
+    - pip install matplotlib
+    - pip install -U scikit-fuzzy
+    - pip install -U scikit-learn
+    - nose2 -s fb_classifier 

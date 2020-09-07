@@ -1,0 +1,23 @@
+stages:
+  - build
+  - test
+
+build:
+  image: python:3.8
+  stage: build
+  script:
+    - echo "Building"
+    - pip install -r Modules/requirements .txt Modules/
+  artifacts:
+    paths:
+      - Modules/
+      - Unit_Test/
+
+test:
+  image: python:3.8
+  stage: test
+  script:
+    - echo "Testing"
+    - pip install -r Modules/requirements.txt
+    - pip install nose2
+    - nose2 -v
