@@ -9,9 +9,6 @@ It includes 2 different approaches:
 
 ### The Fuzzy C-Means classifier contains the following libraries, methods and oyher helpful resources:
 
-* **ComputerVisionPackageSetup.yml:** For easily setting up the environment and installing all necessary packages, you
-can simply load this file into a new environment on anaconda.
-
 #### Classification
 
 * **FuzzyCMeans.py:**
