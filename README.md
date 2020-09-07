@@ -1,4 +1,4 @@
-# API Documentation:
+# Documentation:
 
 This is a Software Library which provides the functionality of classifying (segmenting) images into foreground and
 background.
